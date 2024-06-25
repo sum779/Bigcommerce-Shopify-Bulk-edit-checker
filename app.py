@@ -3,15 +3,15 @@ from flask import Flask
 import pandas as pd
 
 
-app2 = Flask(__name__)
-app2.config['SECRET_KEY'] = 'your_secret_key_here'
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 
-@app2.route('/')
+@app.route('/')
 def home():
     return render_template('product-tally.html')
 
-@app2.route('/enter2', methods=['GET', 'POST'])
+@app.route('/enter2', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         old_file = request.files['old_file']
@@ -24,11 +24,11 @@ def index():
     
     return render_template('product-tally.html')
 
-@app2.route('/product-tally', methods=['GET'])
+@app.route('/product-tally', methods=['GET'])
 def compare():
     return render_template('product-tally.html')
 
-@app2.route('/download_missing_in_new')
+@app.route('/download_missing_in_new')
 def download_missing_in_new():
     comparison_result = session.get('comparison_result')
     if comparison_result:
@@ -41,7 +41,7 @@ def download_missing_in_new():
         )
     return "Comparison result not found in session"
 
-@app2.route('/download_missing_in_old')
+@app.route('/download_missing_in_old')
 def download_missing_in_old():
     comparison_result = session.get('comparison_result')
     if comparison_result:
@@ -100,4 +100,4 @@ def compare_product(old_file, new_file):
     return result
 
 if __name__ == "__main__":
-    app2.run(debug=True)
+    app.run(debug=True)
