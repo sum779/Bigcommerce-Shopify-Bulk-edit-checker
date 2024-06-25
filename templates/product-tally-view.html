@@ -66,17 +66,16 @@
             height: 600px;
             border: 1px solid #ddd;
             padding: 10px;
+            margin: 10px;
         }
-        .btn{
-            padding: 10px;
-        }
+        
     </style>
 </head>
 <body>
     <div class="container animated fadeIn">
         <h2> Product Missing in Shopify
             {% if comparison_result.missing_in_new %}
-                <a href="{{ url_for('main2.download_missing_in_new') }}" class="btn btn-primary btn-sm">Download Missing</a>
+                <a href="{{ url_for('download_missing_in_new') }}" class="btn btn-primary btn-sm">Download Missing</a>
             {% endif %}
         </h2>
         {% if comparison_result.missing_in_new %}
@@ -100,7 +99,7 @@
         
         <h2>Product Missing in Bigcommerce
             {% if comparison_result.missing_in_old %}
-                <a href="{{ url_for('main2.download_missing_in_old') }}" class="btn btn-primary btn-sm">Download Missing</a>
+                <a href="{{ url_for('download_missing_in_old') }}" class="btn btn-primary btn-sm">Download Missing</a>
             {% endif %}
         </h2>
         {% if comparison_result.missing_in_old %}
