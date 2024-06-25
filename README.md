@@ -1,4 +1,5 @@
 **Bulk Edit Verifier tool for Bigcommerce and Shopify**
+
 To ensure a smooth migration between BigCommerce and Shopify, I have developed a Bulk Edit Verifier tool. This tool automates the verification process, checking for any missing products after the migration.
 
 The Bulk Edit Verifier is designed to efficiently handle large datasets, comparing the product catalogs of both platforms to identify any discrepancies. It provides a detailed report highlighting any missing products, enabling you to quickly rectify any issues that may arise during the migration process.
