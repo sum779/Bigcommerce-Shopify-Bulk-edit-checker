@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
     "version": 2,
     "builds": [
@@ -13,20 +12,4 @@
         "dest": "app.py"
       }
     ]
-=======
-{
-    "version": 2,
-    "builds": [
-      {
-        "src": "product_tally.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "product_tally.py"
-      }
-    ]
->>>>>>> 852c025c943663c80d91d442f63848159a121902
   }
