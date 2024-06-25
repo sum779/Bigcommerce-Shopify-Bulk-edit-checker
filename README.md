@@ -1,0 +1,1 @@
+# Bigcommerce-Shopify-Bulk-edit-checker
